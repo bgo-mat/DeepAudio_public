@@ -1,0 +1,174 @@
+- model: app.Genre
+  pk: 1
+  fields:
+    name: House
+
+- model: app.Genre
+  pk: 2
+  fields:
+    name: Techno
+
+- model: app.Genre
+  pk: 3
+  fields:
+    name: Classical
+
+- model: app.Genre
+  pk: 4
+  fields:
+    name: Rock
+
+- model: app.Genre
+  pk: 5
+  fields:
+    name: Pop
+
+- model: app.Genre
+  pk: 6
+  fields:
+    name: Jazz
+
+- model: app.Genre
+  pk: 7
+  fields:
+    name: Hip-Hop
+
+- model: app.Genre
+  pk: 8
+  fields:
+    name: Reggae
+
+- model: app.Genre
+  pk: 9
+  fields:
+    name: Blues
+
+- model: app.Genre
+  pk: 10
+  fields:
+    name: Country
+
+- model: app.Genre
+  pk: 11
+  fields:
+    name: Electronic
+
+- model: app.Genre
+  pk: 12
+  fields:
+    name: Metal
+
+- model: app.Genre
+  pk: 13
+  fields:
+    name: R&B
+
+- model: app.Genre
+  pk: 14
+  fields:
+    name: Soul
+
+- model: app.Genre
+  pk: 15
+  fields:
+    name: Funk
+
+- model: app.Genre
+  pk: 16
+  fields:
+    name: Disco
+
+- model: app.Genre
+  pk: 17
+  fields:
+    name: Folk
+
+- model: app.Genre
+  pk: 18
+  fields:
+    name: Indie
+
+- model: app.Genre
+  pk: 19
+  fields:
+    name: Punk
+
+- model: app.Genre
+  pk: 20
+  fields:
+    name: Latin
+
+- model: app.Genre
+  pk: 21
+  fields:
+    name: Gospel
+
+- model: app.Genre
+  pk: 22
+  fields:
+    name: Ambient
+
+- model: app.Genre
+  pk: 23
+  fields:
+    name: Dubstep
+
+- model: app.Genre
+  pk: 24
+  fields:
+    name: Trance
+
+- model: app.Genre
+  pk: 25
+  fields:
+    name: Drum and Bass
+
+- model: app.Genre
+  pk: 26
+  fields:
+    name: Grime
+
+- model: app.Genre
+  pk: 27
+  fields:
+    name: K-Pop
+
+- model: app.Genre
+  pk: 28
+  fields:
+    name: J-Pop
+
+- model: app.Genre
+  pk: 29
+  fields:
+    name: EDM
+
+- model: app.Genre
+  pk: 30
+  fields:
+    name: Trap
+
+- model: app.Genre
+  pk: 31
+  fields:
+    name: Reggaeton
+
+- model: app.Genre
+  pk: 32
+  fields:
+    name: Dancehall
+
+- model: app.Genre
+  pk: 33
+  fields:
+    name: Future Bass
+
+- model: app.Genre
+  pk: 34
+  fields:
+    name: Minimal Techno
+
+- model: app.Genre
+  pk: 35
+  fields:
+    name: Cinematic

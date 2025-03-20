@@ -1,0 +1,43 @@
+
+<div class="">
+    <!-- Affichez le nom de la catégorie -->
+    <h1 class="mt-5 text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-text dark:text-text-dark text-center sm:text-left">{{ category?.name }}</h1>
+
+    <!-- Bascule Packs/Sounds -->
+    <div class="flex justify-center sm:justify-start space-x-4 mb-4">
+        <button
+                (click)="viewMode = 'sounds'"
+                [class.font-bold]="viewMode === 'sounds'"
+                class="px-3 py-2 text-text dark:text-text-dark rounded hover:bg-primary dark:hover:bg-primary-dark transition duration-200">
+            Sounds
+        </button>
+        <button
+                (click)="viewMode = 'packs'"
+                [class.font-bold]="viewMode === 'packs'"
+                class="text-text dark:text-text-dark px-3 py-2 rounded hover:bg-primary dark:hover:bg-primary-dark transition duration-200">
+            Packs
+        </button>
+    </div>
+    <div>
+    <app-filter-sounds></app-filter-sounds>
+    </div>
+    <!-- Vue des packs -->
+    <div *ngIf="viewMode === 'packs'" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 mt-8">
+        <!-- Bouclez sur chaque pack et passez-le au composant PackCardComponent -->
+        <app-pack-card
+                *ngFor="let pack of category?.pack?.results"
+                (click)="navigateToPackDetail(pack)"
+                [pack]="pack">
+        </app-pack-card>
+    </div>
+
+    <!-- Vue des sons -->
+    <div *ngIf="viewMode === 'sounds'" class="flex flex-col mt-8">
+        <!-- En-tête de la liste des sons -->
+        <app-header-music></app-header-music>
+
+
+        <!-- Liste des sons -->
+        <app-music-card *ngFor="let sound of category?.sound?.results" [sound]="sound"></app-music-card>
+    </div>
+</div>

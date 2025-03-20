@@ -1,0 +1,20 @@
+<div class="bg-white dark:bg-gray-800 shadow p-4 rounded">
+    <h2 class="text-lg font-bold mb-4">Billing Information</h2>
+    <p>Manage your billing details through Stripe:</p>
+
+    <!-- Bouton pour accéder à la session de facturation -->
+    <button
+            (click)="billingSession()"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 duration-200 transition"
+    >
+        Look at Billing
+    </button>
+
+    <!-- Bouton pour supprimer l'abonnement -->
+    <button
+            (click)="deleteSub()"
+            class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition ml-4 duration-200"
+    >
+        Delete Subscription
+    </button>
+</div>

@@ -1,0 +1,39 @@
+<div class="bg-white dark:bg-gray-800 shadow p-4 rounded">
+    <h2 class="text-lg font-bold mb-4">Subscription Details</h2>
+
+    <!-- Affichage du chargement -->
+    <div *ngIf="loading" class="text-center">
+        <p>Loading subscription details...</p>
+    </div>
+
+    <!-- Affichage des données de l'abonnement -->
+    <div *ngIf="!loading && subscription" class="space-y-4">
+        <div>
+            <label class="font-medium">Plan ID:</label>
+            <span> {{ subscription.plan }}</span>
+        </div>
+        <div>
+            <label class="font-medium">Start Date:</label>
+            <span> {{ subscription.start_date | date: 'medium' }}</span>
+        </div>
+        <div>
+            <label class="font-medium">Next Payment Date:</label>
+            <span> {{ subscription.next_payment_date | date: 'medium' }}</span>
+        </div>
+        <div>
+            <label class="font-medium">Trial End:</label>
+            <span> {{ subscription.trial_end | date: 'medium' }}</span>
+        </div>
+        <div>
+            <label class="font-medium">Status:</label>
+            <span [class.text-green-500]="subscription.active" [class.text-red-500]="!subscription.active">
+        {{ subscription.active ? 'Active' : 'Inactive' }}
+      </span>
+        </div>
+    </div>
+
+    <!-- Aucun abonnement trouvé -->
+    <div *ngIf="!loading && !subscription" class="text-center">
+        <p>No subscription found.</p>
+    </div>
+</div>

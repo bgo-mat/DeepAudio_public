@@ -1,0 +1,13 @@
+FROM python:3.12.6-slim
+
+WORKDIR /app
+
+COPY requirements.txt /requirements.txt
+
+RUN apt update && apt -y install git zsh curl ffmpeg netcat-openbsd
+
+RUN pip install --no-cache-dir -r /requirements.txt
+
+COPY . /app
+
+CMD ["celery", "-A", "deepBack", "worker", "--loglevel=info"]

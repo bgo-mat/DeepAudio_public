@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription Cancellation Confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Reset */
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+            .logo img {
+                width: 150px !important;
+            }
+            .button {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f4;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td align="center" bgcolor="#f4f4f4" style="padding: 20px 0;">
+            <!-- Main Container -->
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="container" style="background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
+                <!-- Header -->
+                <tr>
+                    <td align="center" bgcolor="#ffffff" style="padding: 20px 0;">
+                        <div class="logo">
+                            <a href="{{ site_url }}" target="_blank">
+                               <!-- <img src="YOUR_LOGO_URL" alt="Your Company Logo" width="200" style="display: block; width:200px; max-width:100%; height:auto;">-->
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Body -->
+                <tr>
+                    <td align="left" bgcolor="#ffffff" style="padding: 20px 30px; font-family: Arial, sans-serif; color:#333333; font-size:16px; line-height:24px;">
+                        <h2 style="margin:0 0 10px 0; font-size:24px; color:#333333;">Your Subscription Has Been Canceled</h2>
+                        <p style="margin:0 0 20px 0;">Dear User's Name,</p>
+                        <p style="margin:0 0 20px 0;">We're sorry to see you go! Your subscription to {{ subscription_plan }} plan has been successfully canceled as of today.</p>
+                        <p style="margin:0 0 20px 0;">If you change your mind or wish to reactivate your subscription in the future, you can do so by visiting our website.</p>
+                        <p style="margin:0 0 20px 0;">If you have any feedback or need assistance, please don't hesitate to reach out to our support team.</p>
+                        <!-- Call to Action Button -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center">
+                                    <a href="{{ site_url }}" target="_blank" class="button" style="background-color:#dc3545; color:#ffffff; padding:12px 24px; text-decoration:none; border-radius:4px; display:inline-block; font-size:16px;">Visit Our Website</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Footer -->
+                <tr>
+                    <td align="center" bgcolor="#f4f4f4" style="padding: 20px 30px; font-family: Arial, sans-serif; font-size:12px; color:#777777;">
+                        <p style="margin:0;">&copy; 2024 [Your Company]. All rights reserved.</p>
+                        <p style="margin:0;">1234 Street Rd, Suite 1234, City, State, Country</p>
+                        <p style="margin:0;">If you have any questions about your cancellation, please contact our support team.</p>
+                    </td>
+                </tr>
+            </table>
+            <!-- End Main Container -->
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,127 @@
+- model: app.Pack
+  pk: 1
+  fields:
+    name: Pack House
+    description: "A collection of House music sounds"
+    duration: "00:12:30"
+    num_sounds: 5
+    price: 19.99
+    genres: [1, 4]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-01T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Pack
+  pk: 2
+  fields:
+    name: Synthwave Collection
+    description: "A collection of Synthwave sounds"
+    duration: "00:10:00"
+    num_sounds: 4
+    price: 15.99
+    genres: [2]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Premium"
+    created_at: "2024-01-02T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Pack
+  pk: 3
+  fields:
+    name: Hip-Hop Essentials
+    description: "A collection of essential Hip-hop sounds"
+    duration: "00:08:20"
+    num_sounds: 6
+    price: 22.50
+    genres: [3]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Pack
+  pk: 4
+  fields:
+    name: Hip-Hop Essentials
+    description: "A collection of essential Hip-hop sounds"
+    duration: "00:08:20"
+    num_sounds: 6
+    price: 22.50
+    genres: [3]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 10
+
+- model: app.Pack
+  pk: 5
+  fields:
+    name: Hip-Hop Essentials
+    description: "A collection of essential Hip-hop sounds"
+    duration: "00:08:20"
+    num_sounds: 6
+    price: 22.50
+    genres: [3]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Pack
+  pk: 6
+  fields:
+    name: Hip-Hop Essentials
+    description: "A collection of essential Hip-hop sounds"
+    duration: "00:08:20"
+    num_sounds: 6
+    price: 22.50
+    genres: [3]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Pack
+  pk: 7
+  fields:
+    name: Hip-Hop Essentials
+    description: "A collection of essential Hip-hop sounds"
+    duration: "00:08:20"
+    num_sounds: 6
+    price: 22.50
+    genres: [3]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 0
+
+
+- model: app.Pack
+  pk: 8
+  fields:
+    name: Hip-Hop Essentials
+    description: "A collection of essential Hip-hop sounds"
+    duration: "00:08:20"
+    num_sounds: 6
+    price: 22.50
+    genres: [3]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 0
+
+
+- model: app.Pack
+  pk: 9
+  fields:
+    name: Hip-Hop Essentials
+    description: "A collection of essential Hip-hop sounds"
+    duration: "00:08:20"
+    num_sounds: 6
+    price: 22.50
+    genres: [3]
+    image: "3b4b6cac-126d-400c-a226-39cb2b513ae3_fffd922a-a32f-48de-947e-4f57769f5586.jpg"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 8

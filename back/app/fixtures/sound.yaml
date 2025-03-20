@@ -1,0 +1,107 @@
+- model: app.Sound
+  pk: 1
+  fields:
+    pack: 1
+    name: Kick House 1
+    duration: "00:00:30"
+    price: 1.99
+    key: C
+    scale : major
+    bpm: 128
+    genres: [1]
+    type: [1]
+    subtype: [1]
+    audio_file: "0fc52cb5-f253-48d0-aa81-affe74b64687_8f9c2063-7818-416e-8ec2-5f951257cc40.wav"
+    available_for: "Standard"
+    created_at: "2024-01-01T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Sound
+  pk: 2
+  fields:
+    pack: 1
+    name: Snare House 1
+    duration: "00:00:15"
+    price: 1.49
+    key: F
+    scale : major
+    bpm: 128
+    genres: [1]
+    type: [1]
+    subtype: [2]
+    audio_file: "0fc52cb5-f253-48d0-aa81-affe74b64687_8f9c2063-7818-416e-8ec2-5f951257cc40.wav"
+    available_for: "Standard"
+    created_at: "2024-01-01T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Sound
+  pk: 3
+  fields:
+    pack: 2
+    name: Synthwave Bassline 1
+    duration: "00:01:00"
+    price: 2.99
+    key: E
+    scale : minor
+    bpm: 90
+    genres: [2]
+    type: [4]
+    subtype: [6]
+    audio_file: "0fc52cb5-f253-48d0-aa81-affe74b64687_8f9c2063-7818-416e-8ec2-5f951257cc40.wav"
+    available_for: "Premium"
+    created_at: "2024-01-02T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Sound
+  pk: 4
+  fields:
+    pack: 2
+    name: Synthwave Arp
+    duration: "00:00:45"
+    price: 2.49
+    key: G
+    scale : minor
+    bpm: 110
+    genres: [2]
+    type: [3]
+    subtype: [5]
+    audio_file: "0fc52cb5-f253-48d0-aa81-affe74b64687_8f9c2063-7818-416e-8ec2-5f951257cc40.wav"
+    available_for: "Premium"
+    created_at: "2024-01-02T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Sound
+  pk: 5
+  fields:
+    pack: 3
+    name: Hip-hop Drum Loop
+    duration: "00:01:15"
+    price: 3.49
+    key: D
+    scale : minor
+    bpm: 90
+    genres: [3]
+    type: [1]
+    subtype: [1, 2]
+    audio_file: "0fc52cb5-f253-48d0-aa81-affe74b64687_8f9c2063-7818-416e-8ec2-5f951257cc40.wav"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 0
+
+- model: app.Sound
+  pk: 6
+  fields:
+    pack: 3
+    name: Hip-hop Vocal Sample
+    duration: "00:00:25"
+    price: 1.99
+    key: A
+    scale : minor
+    bpm: 85
+    genres: [3]
+    type: [2]
+    subtype: [3]
+    audio_file: "0fc52cb5-f253-48d0-aa81-affe74b64687_8f9c2063-7818-416e-8ec2-5f951257cc40.wav"
+    available_for: "Standard"
+    created_at: "2024-01-03T00:00:00Z"
+    number_of_downloads: 0

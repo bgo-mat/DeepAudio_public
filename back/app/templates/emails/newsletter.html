@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Découvrez les 5 derniers packs sortis !</title>
+</head>
+<body>
+<h1>Découvrez les 5 derniers packs sortis !</h1>
+<ul>
+    {% for pack in packs %}
+        <li>
+            <img src="{{ pack.image }}">
+            <h2>{{ pack.name }}</h2>
+            <p>{{ pack.description }}</p>
+            <a href="{{ site_url }}/packs/{{ pack.id }}">Voir le pack</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

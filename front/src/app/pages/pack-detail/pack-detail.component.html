@@ -1,0 +1,9 @@
+<div class="flex flex-col space-y-6">
+    <!-- Composant d'information du pack -->
+    <app-pack-info [pack]="pack"></app-pack-info>
+    <!-- Filtres -->
+    <app-filter-sounds></app-filter-sounds>
+    <app-header-music></app-header-music>
+
+    <app-music-card *ngFor="let sound of pack?.paginated_sounds" [sound]="sound"></app-music-card>
+</div>

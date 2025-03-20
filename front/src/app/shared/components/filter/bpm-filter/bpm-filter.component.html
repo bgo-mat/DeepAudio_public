@@ -1,0 +1,68 @@
+<div class="bpm-filter-container">
+    <h3 class="mb-2">BPM</h3>
+
+    <div class="flex flex-col gap-4">
+        <!-- Option Exact -->
+        <label class="flex items-center gap-2">
+            <input
+                    type="radio"
+                    name="bpmMode"
+                    [value]="'Exact'"
+                    [checked]="mode === 'Exact'"
+                    (change)="selectMode('Exact')"
+                    class="radio-button"
+            />
+            Exact
+            <input
+                    *ngIf="mode === 'Exact'"
+                    type="number"
+                    placeholder="BPM"
+                    class="bpm-input"
+                    [value]="exactBpm || ''"
+                    (input)="onExactBpmChange($event)"
+            />
+        </label>
+
+        <!-- Option Range -->
+        <label class="flex items-center gap-2">
+            <input
+                    type="radio"
+                    name="bpmMode"
+                    [value]="'Range'"
+                    [checked]="mode === 'Range'"
+                    (change)="selectMode('Range')"
+                    class="radio-button"
+            />
+            Range
+        </label>
+
+        <div *ngIf="mode === 'Range'" class="range-slider">
+            <input
+                    type="range"
+                    min="50"
+                    max="200"
+                    [value]="bpmRange[0]"
+                    (input)="onRangeChange($event, 'min')"
+                    class="slider"
+            />
+            <input
+                    type="range"
+                    min="50"
+                    max="200"
+                    [value]="bpmRange[1]"
+                    (input)="onRangeChange($event, 'max')"
+                    class="slider"
+            />
+            <div class="flex justify-between text-sm">
+                <span>{{ bpmRange[0] }}</span>
+                <span>{{ bpmRange[1] }}</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex justify-between mt-4">
+        <button class="text-accent" (click)="clear()">Clear</button>
+        <button class="save-button">Save</button>
+    </div>
+</div>

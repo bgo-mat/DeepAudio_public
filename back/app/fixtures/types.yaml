@@ -1,0 +1,74 @@
+- model: app.Type
+  pk: 1
+  fields:
+    name: Drum
+
+- model: app.Type
+  pk: 2
+  fields:
+    name: Bass
+
+- model: app.Type
+  pk: 3
+  fields:
+    name: Voice
+
+- model: app.Type
+  pk: 4
+  fields:
+    name: Guitar
+
+- model: app.Type
+  pk: 5
+  fields:
+    name: Keyboard
+
+- model: app.Type
+  pk: 6
+  fields:
+    name: Strings
+
+- model: app.Type
+  pk: 7
+  fields:
+    name: Wind Instruments
+
+- model: app.Type
+  pk: 8
+  fields:
+    name: Percussion
+
+- model: app.Type
+  pk: 9
+  fields:
+    name: Electronic Sounds
+
+- model: app.Type
+  pk: 10
+  fields:
+    name: Effects
+
+- model: app.Type
+  pk: 11
+  fields:
+    name: Synthesizer
+
+- model: app.Type
+  pk: 12
+  fields:
+    name: FX
+
+- model: app.Type
+  pk: 13
+  fields:
+    name: Brass & Woodwinds
+
+- model: app.Type
+  pk: 14
+  fields:
+    name: Guitar (Electric/Acoustic)
+
+- model: app.Type
+  pk: 15
+  fields:
+    name: Synth

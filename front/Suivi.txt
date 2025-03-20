@@ -1,0 +1,18 @@
+Couleur idée :
+
+    -primary : 424242
+    -secondary: 607C8A
+    -accent : D33131
+    -text: 0C130D
+    -bg: F0FFF4
+
+    -primary : 717171
+       -secondary: white
+        -accent : D33131
+        -text: black
+        -bg: white
+
+
+police :
+     -heading: catamaran
+     -body: noto sans wancho

@@ -1,0 +1,80 @@
+[
+  {
+    "model": "app.subscriptionplan",
+    "pk": 1,
+    "fields": {
+      "subscription_type": "LITE",
+      "payment_frequency": "MONTHLY",
+      "amount": "4.99",
+      "credits_per_month": 100,
+      "description": "100 credits per month",
+      "stripe_price_id": "price_1QJJexAmpv2h0RJtqpwqetaV",
+      "stripe_prod_id": "prod_RBh3sXGmkQpsW4"
+    }
+  },
+  {
+    "model": "app.subscriptionplan",
+    "pk": 2,
+    "fields": {
+      "subscription_type": "LITE",
+      "payment_frequency": "ANNUAL",
+      "amount": "49.99",
+      "credits_per_month": 100,
+      "description": "100 credits per month (2 months free)",
+      "stripe_price_id": "price_1QF0rEAmpv2h0RJtLTusXlG9",
+      "stripe_prod_id": "prod_R7FLs7D7UAgRET"
+    }
+  },
+  {
+    "model": "app.subscriptionplan",
+    "pk": 3,
+    "fields": {
+      "subscription_type": "PLUS",
+      "payment_frequency": "MONTHLY",
+      "amount": "9.99",
+      "credits_per_month": 300,
+      "description": "300 credits per month",
+      "stripe_price_id": "price_1QF0tVAmpv2h0RJt6L1dun0x",
+      "stripe_prod_id": "prod_R7FO6AbZyhAEVb"
+    }
+  },
+  {
+    "model": "app.subscriptionplan",
+    "pk": 4,
+    "fields": {
+      "subscription_type": "PLUS",
+      "payment_frequency": "ANNUAL",
+      "amount": "99.99",
+      "credits_per_month": 300,
+      "description": "300 credits per month (2 months free)",
+      "stripe_price_id": "price_1QF0uiAmpv2h0RJt7thrXdG2",
+      "stripe_prod_id": "prod_R7FPIq4o53xd96"
+    }
+  },
+  {
+    "model": "app.subscriptionplan",
+    "pk": 5,
+    "fields": {
+      "subscription_type": "PREMIUM",
+      "payment_frequency": "MONTHLY",
+      "amount": "14.99",
+      "credits_per_month": null,
+      "description": "Unlimited downloads, access to all available content",
+      "stripe_price_id": "price_1QF0vkAmpv2h0RJtwRZPC2PJ",
+      "stripe_prod_id": "prod_R7FQ9LHU5frQb2"
+    }
+  },
+  {
+    "model": "app.subscriptionplan",
+    "pk": 6,
+    "fields": {
+      "subscription_type": "PREMIUM",
+      "payment_frequency": "ANNUAL",
+      "amount": "149.99",
+      "credits_per_month": null,
+      "description": "Unlimited downloads, access to all available content (2 months free)",
+      "stripe_price_id": "price_1QF0wxAmpv2h0RJtV0KOh4Z7",
+      "stripe_prod_id": "prod_R7FRm5GRsFFioj"
+    }
+  }
+]

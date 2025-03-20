@@ -1,0 +1,445 @@
+- model: app.SubType
+  pk: 1
+  fields:
+    type: 1  # Drum
+    name: Snare
+
+- model: app.SubType
+  pk: 2
+  fields:
+    type: 1  # Drum
+    name: Kick
+
+- model: app.SubType
+  pk: 3
+  fields:
+    type: 1  # Drum
+    name: Hi-Hat
+
+- model: app.SubType
+  pk: 4
+  fields:
+    type: 1  # Drum
+    name: Tom
+
+- model: app.SubType
+  pk: 5
+  fields:
+    type: 1  # Drum
+    name: Cymbal
+
+- model: app.SubType
+  pk: 6
+  fields:
+    type: 1  # Drum
+    name: Rimshot
+
+- model: app.SubType
+  pk: 7
+  fields:
+    type: 1  # Drum
+    name: 808
+
+- model: app.SubType
+  pk: 8
+  fields:
+    type: 1  # Drum
+    name: Percussion
+
+- model: app.SubType
+  pk: 9
+  fields:
+    type: 1  # Drum
+    name: Claps
+
+- model: app.SubType
+  pk: 10
+  fields:
+    type: 1  # Drum
+    name: Breaks
+
+- model: app.SubType
+  pk: 11
+  fields:
+    type: 1  # Drum
+    name: Fills
+- model: app.SubType
+  pk: 12
+  fields:
+    type: 2  # Bass
+    name: Electric Bass
+
+- model: app.SubType
+  pk: 13
+  fields:
+    type: 2  # Bass
+    name: Synth Bass
+
+- model: app.SubType
+  pk: 14
+  fields:
+    type: 2  # Bass
+    name: Upright Bass
+
+- model: app.SubType
+  pk: 15
+  fields:
+    type: 2  # Bass
+    name: Sub Bass
+
+- model: app.SubType
+  pk: 16
+  fields:
+    type: 2  # Bass
+    name: Fretless Bass
+
+- model: app.SubType
+  pk: 17
+  fields:
+    type: 2  # Bass
+    name: Analog Bass
+
+- model: app.SubType
+  pk: 18
+  fields:
+    type: 2  # Bass
+    name: Acid Bass
+
+- model: app.SubType
+  pk: 19
+  fields:
+    type: 2  # Bass
+    name: Distorted Bass
+
+- model: app.SubType
+  pk: 20
+  fields:
+    type: 2  # Bass
+    name: Wobble Bass
+- model: app.SubType
+  pk: 21
+  fields:
+    type: 3  # Voice
+    name: Male Voice
+
+- model: app.SubType
+  pk: 22
+  fields:
+    type: 3  # Voice
+    name: Female Voice
+
+- model: app.SubType
+  pk: 23
+  fields:
+    type: 3  # Voice
+    name: Choir
+
+- model: app.SubType
+  pk: 24
+  fields:
+    type: 3  # Voice
+    name: Backing Vocals
+
+- model: app.SubType
+  pk: 25
+  fields:
+    type: 3  # Voice
+    name: Rap Vocals
+
+- model: app.SubType
+  pk: 26
+  fields:
+    type: 3  # Voice
+    name: Spoken Word
+
+- model: app.SubType
+  pk: 27
+  fields:
+    type: 3  # Voice
+    name: Vocoder
+
+- model: app.SubType
+  pk: 28
+  fields:
+    type: 3  # Voice
+    name: Shouts
+
+- model: app.SubType
+  pk: 29
+  fields:
+    type: 3  # Voice
+    name: Screams
+
+- model: app.SubType
+  pk: 30
+  fields:
+    type: 3  # Voice
+    name: Whispers
+- model: app.SubType
+  pk: 31
+  fields:
+    type: 4  # Guitar
+    name: Electric Guitar
+
+- model: app.SubType
+  pk: 32
+  fields:
+    type: 4  # Guitar
+    name: Acoustic Guitar
+
+- model: app.SubType
+  pk: 33
+  fields:
+    type: 4  # Guitar
+    name: Bass Guitar
+
+- model: app.SubType
+  pk: 34
+  fields:
+    type: 4  # Guitar
+    name: Lead Guitar
+
+- model: app.SubType
+  pk: 35
+  fields:
+    type: 4  # Guitar
+    name: Rhythm Guitar
+
+- model: app.SubType
+  pk: 36
+  fields:
+    type: 4  # Guitar
+    name: Slide Guitar
+- model: app.SubType
+  pk: 37
+  fields:
+    type: 5  # Keyboard
+    name: Piano
+
+- model: app.SubType
+  pk: 38
+  fields:
+    type: 5  # Keyboard
+    name: Synthesizer
+
+- model: app.SubType
+  pk: 39
+  fields:
+    type: 5  # Keyboard
+    name: Organ
+
+- model: app.SubType
+  pk: 40
+  fields:
+    type: 5  # Keyboard
+    name: Harpsichord
+
+- model: app.SubType
+  pk: 41
+  fields:
+    type: 5  # Keyboard
+    name: Electric Piano
+
+- model: app.SubType
+  pk: 42
+  fields:
+    type: 5  # Keyboard
+    name: Clavinet
+- model: app.SubType
+  pk: 43
+  fields:
+    type: 6  # Strings
+    name: Violin
+
+- model: app.SubType
+  pk: 44
+  fields:
+    type: 6  # Strings
+    name: Viola
+
+- model: app.SubType
+  pk: 45
+  fields:
+    type: 6  # Strings
+    name: Cello
+
+- model: app.SubType
+  pk: 46
+  fields:
+    type: 6  # Strings
+    name: Double Bass
+
+- model: app.SubType
+  pk: 47
+  fields:
+    type: 6  # Strings
+    name: Harp
+
+- model: app.SubType
+  pk: 48
+  fields:
+    type: 6  # Strings
+    name: Mandolin
+- model: app.SubType
+  pk: 49
+  fields:
+    type: 7  # Wind Instruments
+    name: Flute
+
+- model: app.SubType
+  pk: 50
+  fields:
+    type: 7  # Wind Instruments
+    name: Clarinet
+
+- model: app.SubType
+  pk: 51
+  fields:
+    type: 7  # Wind Instruments
+    name: Saxophone
+
+- model: app.SubType
+  pk: 52
+  fields:
+    type: 7  # Wind Instruments
+    name: Trumpet
+
+- model: app.SubType
+  pk: 53
+  fields:
+    type: 7  # Wind Instruments
+    name: Trombone
+
+- model: app.SubType
+  pk: 54
+  fields:
+    type: 7  # Wind Instruments
+    name: Oboe
+- model: app.SubType
+  pk: 55
+  fields:
+    type: 8  # Percussion
+    name: Congas
+
+- model: app.SubType
+  pk: 56
+  fields:
+    type: 8  # Percussion
+    name: Bongos
+
+- model: app.SubType
+  pk: 57
+  fields:
+    type: 8  # Percussion
+    name: Timbales
+
+- model: app.SubType
+  pk: 58
+  fields:
+    type: 8  # Percussion
+    name: Maracas
+
+- model: app.SubType
+  pk: 59
+  fields:
+    type: 8  # Percussion
+    name: Shaker
+
+- model: app.SubType
+  pk: 60
+  fields:
+    type: 8  # Percussion
+    name: Tambourine
+- model: app.SubType
+  pk: 61
+  fields:
+    type: 9  # Electronic Sounds
+    name: Synth Lead
+
+- model: app.SubType
+  pk: 62
+  fields:
+    type: 9  # Electronic Sounds
+    name: Pad
+
+- model: app.SubType
+  pk: 63
+  fields:
+    type: 9  # Electronic Sounds
+    name: Arpeggio
+
+- model: app.SubType
+  pk: 64
+  fields:
+    type: 9  # Electronic Sounds
+    name: Drone
+
+- model: app.SubType
+  pk: 65
+  fields:
+    type: 9  # Electronic Sounds
+    name: Sound Effects
+- model: app.SubType
+  pk: 66
+  fields:
+    type: 10  # Effects
+    name: Reverb
+
+- model: app.SubType
+  pk: 67
+  fields:
+    type: 10  # Effects
+    name: Delay
+
+- model: app.SubType
+  pk: 68
+  fields:
+    type: 10  # Effects
+    name: Distortion
+
+- model: app.SubType
+  pk: 69
+  fields:
+    type: 10  # Effects
+    name: Chorus
+
+- model: app.SubType
+  pk: 70
+  fields:
+    type: 10  # Effects
+    name: Flanger
+
+- model: app.SubType
+  pk: 71
+  fields:
+    type: 10  # Effects
+    name: Phaser
+- model: app.SubType
+  pk: 72
+  fields:
+    type: 11  # Synthesizer
+    name: Analog Synth
+
+- model: app.SubType
+  pk: 73
+  fields:
+    type: 11  # Synthesizer
+    name: Digital Synth
+
+- model: app.SubType
+  pk: 74
+  fields:
+    type: 11  # Synthesizer
+    name: FM Synth
+
+- model: app.SubType
+  pk: 75
+  fields:
+    type: 11  # Synthesizer
+    name: Wavetable Synth
+
+- model: app.SubType
+  pk: 76
+  fields:
+    type: 11  # Synthesizer
+    name: Modular Synth

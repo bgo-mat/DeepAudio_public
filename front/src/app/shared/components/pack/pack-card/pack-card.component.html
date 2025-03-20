@@ -1,0 +1,26 @@
+<div class="pack-card rounded-lg w-28 sm:w-36 md:w-40 flex-shrink-0 mx-1 hover:cursor-pointer transition-transform duration-200 ease-in-out">
+    <!-- Conteneur de l'image avec position relative -->
+    <div class="relative">
+        <!-- Image du pack dynamique avec une image par défaut si non définie -->
+        <img [src]="pack.imageUrl || pack.image || 'assets/default-pack-image.png'"
+             alt="{{ pack.name || pack.title || 'Pack' }}"
+             class="w-40 h-40 object-cover duration-200 rounded-xl transition-all hover:scale-105">
+
+        <!-- Icône Play/Pause centrée uniquement sur l'image -->
+        <img
+                (click)="togglePlay($event)"
+                [src]="isPlaying ? 'assets/pause.svg' : 'assets/play.svg'"
+                alt="Play/Pause Icon"
+                class="absolute inset-0 w-14 h-14 m-auto opacity-80 transition-transform duration-200 ease-in-out hover:scale-110"
+                style="z-index: 10;">
+    </div>
+
+    <!-- Contenu du pack -->
+    <div class="p-2 text-center">
+        <!-- Titre du pack : teste d'abord `name`, ensuite `title` -->
+        <h3 class="text-sm sm:text-base md:text-lg font-bold text-text dark:text-text-dark truncate">{{ pack.name || pack.title || 'Undefined Pack' }}</h3>
+
+        <!-- Genre : teste `genre_names[0]`, ensuite `genre` -->
+        <p class="text-xs sm:text-sm font-medium text-accent mt-1">{{ (pack.genre_names ? pack.genre_names[0] : null) || pack.genre || 'Unknown Genre' }}</p>
+    </div>
+</div>

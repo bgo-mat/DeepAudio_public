@@ -1,0 +1,33 @@
+
+<div class="flex flex-col gap-5 py-4">
+    <!-- Section des packs populaires -->
+    <app-popular-packs></app-popular-packs>
+
+    <!-- Section des catégories -->
+    <div class=" ">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-text dark:text-text-dark text-center lg:text-left">
+            Categories
+        </h1>
+
+        <!-- Grille des catégories -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
+            <ng-container *ngFor="let group of groupedCategories">
+                <div *ngIf="group.genres && group.genres.length > 0" class="space-y-2">
+                    <h2 class="text-md sm:text-lg md:text-xl font-semibold uppercase text-text dark:text-text-dark mb-1 text-center sm:text-left">
+                        {{ group.title }}
+                    </h2>
+                    <div class="w-8 sm:w-10 h-1 bg-gray-300 mx-auto sm:mx-0 mb-2"></div>
+
+                    <!-- Liste des genres -->
+                    <div class="flex flex-col space-y-1 text-center sm:text-left">
+                        <span *ngFor="let genre of group.genres"
+                              (click)="onGenreClick(genre.id)"
+                              class="text-text dark:text-text-dark hover:text-accent cursor-pointer text-xs sm:text-sm md:text-md lg:text-base">
+                            {{ genre.name }}
+                        </span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

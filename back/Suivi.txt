@@ -1,0 +1,28 @@
+Next step :
+    -permission admin/user/standard/premium/visiteur
+    -Request log systeme (sécurité)
+
+     forget password
+     test upload pack si scale et key sont bien null
+
+     A modifier plus tard :
+        Email template ux/ui
+        stripe portal et facture
+
+    Features :
+        -chatbot
+        -blog
+        -forum
+
+    Dépenses :
+
+          OVH :
+            -S3 : ouverture : 12euros
+            -Serveur : 12euros
+
+
+    A TESTER :
+        ajouter invoice.payment_failed webhook quand paiement refuser sur prelevement ( cree statut "en attente de paiement" sans désabonner ) et declencher email relance
+        verifier l'ajout des credits chaque mois
+        trial period null renvoyer par stripe du coup transaction s'insere en bd
+

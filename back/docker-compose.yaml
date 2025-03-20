@@ -1,0 +1,121 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: back-deepaudio:latest
+    container_name: deepaudio-backend
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    environment:
+      - PORT=${PORT:-8000}
+      - IN_PROD=${IN_PROD}
+      - BREVO_API_KEY=${BREVO_API_KEY}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - SITE_DOMAIN=${SITE_DOMAIN}
+      - SITE_NAME=${SITE_NAME}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_SECRET=${GOOGLE_SECRET_KEY}
+      - TWITTER_CLIENT_ID=${TWITTER_CONSUMER_KEY}
+      - TWITTER_SECRET=${TWITTER_CONSUMER_SECRET}
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis:6379/1
+    depends_on:
+      - db
+      - redis
+    networks:
+      - internal
+
+  celery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: celery-deepaudio:latest
+    container_name: deepaudio-celery
+    command: ["sh", "-c", "celery -A deepBack worker --loglevel=info"]
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    environment:
+      - PORT=${PORT:-8000}
+      - IN_PROD=${IN_PROD}
+      - BREVO_API_KEY=${BREVO_API_KEY}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - SITE_DOMAIN=${SITE_DOMAIN}
+      - SITE_NAME=${SITE_NAME}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_SECRET=${GOOGLE_SECRET_KEY}
+      - TWITTER_CLIENT_ID=${TWITTER_CONSUMER_KEY}
+      - TWITTER_SECRET=${TWITTER_CONSUMER_SECRET}
+      - CELERY_BROKER_URL=redis://:${REDIS_PASSWORD}@redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://:${REDIS_PASSWORD}@redis:6379/0
+    depends_on:
+      - redis
+      - backend
+    networks:
+      - internal
+
+  celery-beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: celery-beat-deepaudio:latest
+    container_name: deepaudio-celery-beat
+    command: ["celery", "-A", "deepBack", "beat", "--loglevel=info"]
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    environment:
+      - PORT=${PORT:-8000}
+      - IN_PROD=${IN_PROD}
+      - BREVO_API_KEY=${BREVO_API_KEY}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - SITE_DOMAIN=${SITE_DOMAIN}
+      - SITE_NAME=${SITE_NAME}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_SECRET=${GOOGLE_SECRET_KEY}
+      - TWITTER_CLIENT_ID=${TWITTER_CONSUMER_KEY}
+      - TWITTER_SECRET=${TWITTER_CONSUMER_SECRET}
+      - CELERY_BROKER_URL=redis://:${REDIS_PASSWORD}@redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://:${REDIS_PASSWORD}@redis:6379/0
+    depends_on:
+      - redis
+      - backend
+    networks:
+      - internal
+
+  redis:
+    image: redis:latest
+    container_name: deepaudio-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    restart: unless-stopped
+    networks:
+      - internal
+
+  db:
+    container_name: deepaudio-db
+    image: postgres:13
+    volumes:
+      - deepaudio-pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - "5436:${POSTGRES_PORT:-5432}"
+    networks:
+      - internal
+
+volumes:
+  deepaudio-pgdata:
+
+networks:
+  internal:
+    driver: bridge

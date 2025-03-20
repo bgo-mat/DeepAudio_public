@@ -1,0 +1,38 @@
+<div class="flex w-full items-center justify-center">
+    <form class="w-full max-w-2xl" (submit)="onSubmit()">
+        <fieldset>
+            <div class="relative w-full flex flex-col">
+                <div class="flex items-center bg-primary gap-2 rounded-full py-2 px-4 shadow">
+                    <!-- Champ de saisie -->
+                    <img src="assets/loupe-search-svgrepo-com.svg" class="w-4 cursor-pointer" alt="magnifying glass icone">
+                    <input
+                            [(ngModel)]="inputValue"
+                            (keydown)="onInputKeyDown($event)"
+                            name="searchInput"
+                            type="text"
+                            placeholder="Type to search..."
+                            class="bg-transparent border-0 focus:outline-none placeholder-text-dark focus:ring-0 text-text-dark w-full"
+                    />
+                </div>
+                <!-- Conteneur des bulles -->
+                <div class="relative w-full">
+                    <div #scrollContainer class="flex flex-nowrap items-start gap-1 mt-1 h-8 absolute top-full w-full overflow-x-auto custom-scrollbar"
+                         (scroll)="onScroll()">
+                        <ng-container *ngFor="let keyword of selectedKeywords">
+                          <span class="flex items-center gap-2 text-xs bg-accent text-white rounded-full w-fit px-2 pb-1">
+                            {{ keyword }}
+                              <button (click)="removeKeyword(keyword)" type="button" class="focus:outline-none">&times;</button>
+                          </span>
+                        </ng-container>
+                    </div>
+
+                    <!-- Ombre à gauche -->
+                    <div *ngIf="showLeftShadow" class="absolute top-0 left-0 mt-2 h-8 w-4 pointer-events-none bg-gradient-to-r dark:from-bgCustom-dark from-bgCustom to-transparent"></div>
+                    <div *ngIf="showRightShadow" class="absolute top-full right-0 h-8 w-4 pointer-events-none bg-gradient-to-l dark:from-bgCustom-dark from-bgCustom to-transparent"></div>                </div>
+
+
+
+            </div>
+        </fieldset>
+    </form>
+</div>

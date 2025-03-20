@@ -1,0 +1,30 @@
+<div class="key-filter-container">
+    <h3>Key</h3>
+    <div class="grid">
+        <button
+                *ngFor="let key of keys"
+                (click)="selectKey(key)"
+                [class.selected]="key === selectedKey"
+                class="key-button"
+        >
+            {{ key }}
+        </button>
+    </div>
+
+    <div class="flex justify-center gap-4">
+        <button
+                (click)="selectScale('Major')"
+                [class.selected]="selectedScale === 'Major'"
+                class="scale-button"
+        >
+            Major
+        </button>
+        <button
+                (click)="selectScale('Minor')"
+                [class.selected]="selectedScale === 'Minor'"
+                class="scale-button"
+        >
+            Minor
+        </button>
+    </div>
+</div>

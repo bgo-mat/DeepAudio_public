@@ -1,0 +1,133 @@
+li, span, h1{
+  transition: color 0.2s ease;
+}
+
+.nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  app-nav-bar-button {
+    margin-right: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+
+    .nav-links {
+
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        align-items: center;
+
+        li {
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+
+        }
+      }
+    }
+
+    .auth-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-size: 16px;
+        margin-right: 15px;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .divider {
+        height: 30px;
+        width: 1px;
+        margin-right: 15px;
+      }
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      margin-right: 20px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 847px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .nav-right {
+      justify-content: flex-end;
+      width: auto;
+
+      .nav-links {
+        display: none;
+
+        ul {
+          flex-direction: column;
+          width: 200px;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          padding: 10px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
+
+          li {
+            padding: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .auth-links {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      &.active .nav-links {
+        display: flex;
+      }
+
+      &.active .auth-links {
+        display: none;
+      }
+    }
+  }
+}
