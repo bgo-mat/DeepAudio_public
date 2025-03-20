@@ -8,3 +8,7 @@ Pour avoir accès à l'api :
 Naviguez ensuite vers : 
 
     http://localhost:8000/api/schema/swagger-ui/#/
+
+Pour visualiser les temps d'éxécutions de chaque requête :
+
+    http://localhost:8000/silk/ 
