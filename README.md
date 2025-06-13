@@ -1,6 +1,4 @@
-Uniquement le backend est fonctionnel. 
-
-Pour avoir accès à l'api : 
+ Pour avoir accès à l'api : 
 via Docker, à la racine du dépôt, éxécutez : 
 
       docker compose up -d
