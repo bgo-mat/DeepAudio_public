@@ -1,4 +1,4 @@
-# E-commerce smaple audio Backend
+# E-commerce sample audio Backend
 
 ## English
 
